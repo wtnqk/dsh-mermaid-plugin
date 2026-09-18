@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-mermaid-plugin
+      name: './lib/index.js'
