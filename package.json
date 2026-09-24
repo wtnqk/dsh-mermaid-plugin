@@ -1,6 +1,7 @@
 {
   "name": "dsh-mermaid-plugin",
   "version": "0.1.0",
+  "packageManager": "pnpm@11.7.0",
   "description": "Mermaid previews for DeepSeek Harness Web",
   "keywords": [
     "deepseek-harness",
