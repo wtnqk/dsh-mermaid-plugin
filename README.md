@@ -3,7 +3,7 @@ tall
 Install from npm:
 
 ```sh
-dsh plugin --profile web add dsh-mermaid-plugin
+dsh plugin --profile web add @wtnqk/dsh-mermaid-plugin
 ```
 
 Or install from a local checkout:
@@ -32,7 +32,7 @@ pnpm ≥10 blocks that build until you allow it, so the first run fails. Copy th
 
 ```yaml
 allowBuilds:
-  dsh-mermaid-plugin: true
+  "@wtnqk/dsh-mermaid-plugin": true
 ```
 
 Then run the `add` again. The build runs at install time, so pin a commit you trust, e.g. `github:wtnqk/dsh-mermaid-plugin#<sha>`, and only install sources you have reviewed.
@@ -42,7 +42,7 @@ To install from a package archive instead:
 ```sh
 pnpm run build
 pnpm pack
-dsh plugin --profile web add ./dsh-mermaid-plugin-0.1.0.tgz
+dsh plugin --profile web add ./wtnqk-dsh-mermaid-plugin-0.1.2.tgz
 ```
 
 ## Development
@@ -74,8 +74,8 @@ Then open the package's settings on npmjs.com → **Trusted publishing** and add
 The configuration must complete one successful publish within 48 hours or it expires. After that, `.github/workflows/publish.yml` builds and publishes every `v*` tag via OIDC (no token) with provenance:
 
 ```sh
-git tag v0.1.1
-git push origin v0.1.1
+git tag v0.1.2
+git push origin v0.1.2
 ```
 
 Markdown is rendered by DSH's native `MarkdownText`; only `mermaid` fenced code blocks are enhanced in place. Raw HTML remains disabled. Mermaid-generated SVG is rendered only after Mermaid's strict sanitization.

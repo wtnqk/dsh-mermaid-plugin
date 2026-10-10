@@ -40,7 +40,7 @@ await build({
   target: ["chrome120"],
   external: ["react", "react/jsx-runtime", "react-dom", "@deepseek-ai/dsh-client-ui-primitives"],
   banner: {
-    js: 'window.__ModuleLoader__.load({ id: "dsh-mermaid-plugin", factory: (require) => { var module = { exports: {} }; var exports = module.exports;',
+    js: 'window.__ModuleLoader__.load({ id: "@wtnqk/dsh-mermaid-plugin", factory: (require) => { var module = { exports: {} }; var exports = module.exports;',
   },
   footer: { js: "return module.exports; } });" },
 });
