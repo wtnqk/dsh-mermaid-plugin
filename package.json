@@ -1,14 +1,22 @@
 {
   "name": "dsh-mermaid-plugin",
   "version": "0.1.0",
-  "packageManager": "pnpm@11.7.0",
   "description": "Mermaid previews for DeepSeek Harness Web",
   "keywords": [
     "deepseek-harness",
     "dsh",
     "mermaid"
   ],
+  "homepage": "https://github.com/wtnqk/dsh-mermaid-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/wtnqk/dsh-mermaid-plugin/issues"
+  },
   "license": "MIT",
+  "author": "wtnqk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtnqk/dsh-mermaid-plugin.git"
+  },
   "files": [
     "lib/index.js",
     "lib/client.js",
@@ -37,9 +45,9 @@
     "prepare": "node scripts/build.mjs",
     "check": "oxlint . && oxfmt --check .",
     "fmt": "oxfmt .",
-    "test": "bun test",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "pack:check": "bun run build && bunx npm pack --dry-run"
+    "pack:check": "pnpm run build && pnpm pack --dry-run"
   },
   "dependencies": {
     "mermaid": "11.17.2"
@@ -62,6 +70,7 @@
     "@deepseek-ai/cordis": "^4.0.2",
     "@deepseek-ai/dsh-client-ui-primitives": "*"
   },
+  "packageManager": "pnpm@11.7.0",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
